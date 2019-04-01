@@ -2,7 +2,7 @@
   "name": "ss_js_utils",
   "main": "dist/index.js",
   "description": "工具集合",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "SHEN",
   "license": "MIT",
   "private": false,
