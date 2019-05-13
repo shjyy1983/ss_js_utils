@@ -1,2 +1,7 @@
 参考
 https://github.com/chriso/validator.js/
+
+
+测试
+npm run test
+npm run test ./test/testCompare.js

@@ -7,6 +7,14 @@ exports.default = void 0;
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+/*
+ * @Author: SHEN
+ * @Date: 2019-04-22 15:25:22
+ * @Last Modified by:   SHEN
+ * @Last Modified time: 2019-04-22 15:25:22
+ *
+ * 深拷贝对象
+ */
 function find(list, f) {
   return list.filter(f)[0];
 }

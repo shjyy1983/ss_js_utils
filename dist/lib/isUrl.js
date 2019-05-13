@@ -5,18 +5,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = isUrl;
 
-var _assertString = _interopRequireDefault(require("./util/assertString"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 /*
  * @Author: SHEN
  * @Date: 2019-04-01 15:20:29
  * @Last Modified by: SHEN
- * @Last Modified time: 2019-04-01 15:23:00
+ * @Last Modified time: 2019-04-22 15:25:04
+ *
+ * 判断是否为 url
  */
 function isUrl(string) {
-  (0, _assertString.default)(string);
+  if (typeof string !== 'string') {
+    return false;
+  }
+
   var strRegex = '^((https|http|ftp|rtsp|mms)?://)' + "?(([0-9a-z_!~*'().&=+$%-]+: )?[0-9a-z_!~*'().&=+$%-]+@)?" + // ftp的user@
   '(([0-9]{1,3}.){3}[0-9]{1,3}' + // IP形式的URL- 199.194.52.184
   '|' + // 允许IP和DOMAIN（域名）

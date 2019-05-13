@@ -2,12 +2,15 @@
  * @Author: SHEN
  * @Date: 2019-04-01 15:20:29
  * @Last Modified by: SHEN
- * @Last Modified time: 2019-04-01 15:23:00
+ * @Last Modified time: 2019-04-22 15:25:04
+ *
+ * 判断是否为 url
  */
-import assertString from './util/assertString'
-
 export default function isUrl(string) {
-  assertString(string)
+  if (typeof (string) !== 'string') {
+    return false
+  }
+
   var strRegex = '^((https|http|ftp|rtsp|mms)?://)' +
     "?(([0-9a-z_!~*'().&=+$%-]+: )?[0-9a-z_!~*'().&=+$%-]+@)?" + // ftp的user@
     '(([0-9]{1,3}.){3}[0-9]{1,3}' + // IP形式的URL- 199.194.52.184
