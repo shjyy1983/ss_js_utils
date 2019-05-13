@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.compare = compare;
-exports.compareBy = compareBy;
+exports.compareBy = void 0;
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -12,7 +12,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
  * @Author: SHEN
  * @Date: 2019-05-13 09:21:33
  * @Last Modified by: SHEN
- * @Last Modified time: 2019-05-13 09:44:39
+ * @Last Modified time: 2019-05-13 10:21:16
  */
 
 /**
@@ -48,7 +48,7 @@ function compare(a, b) {
  */
 
 
-function compareBy() {
+var compareBy = function () {
   function identity(v) {
     return v;
   }
@@ -96,9 +96,9 @@ function compareBy() {
 
   function tb(func, opt) {
     /* should get value false for the first call. This can be done by calling the
-      exported function, or the firstBy property on it (for es6 module compatibility)
+      exported function, or the firstBy(compareBy) property on it (for es6 module compatibility)
       */
-    var x = typeof this === 'function' && !this.firstBy ? this : false;
+    var x = typeof this === 'function' && !this.compareBy ? this : false;
     var y = makeCompareFunction(func, opt);
     var f = x ? function (a, b) {
       return x(a, b) || y(a, b);
@@ -107,6 +107,8 @@ function compareBy() {
     return f;
   }
 
-  tb.firstBy = tb;
+  tb.compareBy = tb;
   return tb;
-}
+}();
+
+exports.compareBy = compareBy;
