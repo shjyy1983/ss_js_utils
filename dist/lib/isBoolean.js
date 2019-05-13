@@ -9,7 +9,7 @@ exports.default = isBoolean;
  * @Author: SHEN
  * @Date: 2019-04-22 15:20:49
  * @Last Modified by: SHEN
- * @Last Modified time: 2019-04-22 15:21:16
+ * @Last Modified time: 2019-05-13 09:21:50
  *
  * 判断是否为 boolean
  */

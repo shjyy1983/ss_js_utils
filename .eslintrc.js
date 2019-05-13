@@ -28,6 +28,7 @@ module.exports = {
     'no-debugger': 'error', // 不要使用 debugger，开发关闭，生产报错
     'space-before-function-paren': 'off', // 函数声明时括号与函数名间加空格，关闭，不进行检查
     'no-unused-vars': 'warn',
+    'camelcase': 'warn',
     'semi': 'warn' // 不建议使用逗号，如果有则 warn
   }
 }
