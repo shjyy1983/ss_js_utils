@@ -3,6 +3,7 @@ import isBoolean from './lib/isBoolean'
 import deepCopy from './lib/deepCopy'
 import isUrl from './lib/isUrl'
 import { compare, compareBy } from './lib/compare'
+import numberFormatter from '../src/lib/number'
 
 const validator = {
   isEmpty,
@@ -10,7 +11,8 @@ const validator = {
   deepCopy,
   isUrl,
   compare,
-  compareBy
+  compareBy,
+  numberFormatter
 }
 
 export default validator

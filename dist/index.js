@@ -15,6 +15,8 @@ var _isUrl = _interopRequireDefault(require("./lib/isUrl"));
 
 var _compare = require("./lib/compare");
 
+var _number = _interopRequireDefault(require("../src/lib/number"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var validator = {
@@ -23,7 +25,8 @@ var validator = {
   deepCopy: _deepCopy.default,
   isUrl: _isUrl.default,
   compare: _compare.compare,
-  compareBy: _compare.compareBy
+  compareBy: _compare.compareBy,
+  numberFormatter: _number.default
 };
 var _default = validator;
 exports.default = _default;
