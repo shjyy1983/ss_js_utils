@@ -1,8 +1,8 @@
 /*
  * @Author: SHEN
  * @Date: 2019-05-14 11:19:08
- * @Last Modified by:   SHEN
- * @Last Modified time: 2019-05-14 11:19:08
+ * @Last Modified by: SHEN
+ * @Last Modified time: 2019-05-14 19:46:34
  */
 
 /**
@@ -15,10 +15,6 @@ function formatNumber(num, precision, separator) {
   let parts = ''
   // 判断是否为数字
   if (!isNaN(parseFloat(num)) && isFinite(num)) {
-    // 把类似 .5, 5. 之类的数据转化成0.5, 5, 为数据精度处理做准, 至于为什么
-    // 不在判断中直接写 if (!isNaN(num = parseFloat(num)) && isFinite(num))
-    // 是因为parseFloat有一个奇怪的精度问题, 比如 parseFloat(12312312.1234567119)
-    // 的值变成了 12312312.123456713
     num = Number(num)
     // 处理小数点位数
     num = (typeof precision !== 'undefined' ? num.toFixed(precision) : num).toString()

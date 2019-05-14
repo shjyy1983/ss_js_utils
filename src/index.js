@@ -1,18 +1,29 @@
+/*
+ * @Author: SHEN
+ * @Date: 2019-05-14 19:51:15
+ * @Last Modified by:   SHEN
+ * @Last Modified time: 2019-05-14 19:51:15
+ */
+
+import { increaseBrightness } from './lib/colorHelper'
+import { compare, compareBy } from './lib/compare'
+import deepCopy from './lib/deepCopy'
 import isEmpty from './lib/isEmpty'
 import isBoolean from './lib/isBoolean'
-import deepCopy from './lib/deepCopy'
 import isUrl from './lib/isUrl'
-import { compare, compareBy } from './lib/compare'
-import numberFormatter from '../src/lib/number'
+import numberFormatter from './lib/number'
+import throttle from './lib/throttle'
 
 const validator = {
-  isEmpty,
-  isBoolean,
-  deepCopy,
-  isUrl,
   compare,
   compareBy,
-  numberFormatter
+  increaseBrightness,
+  deepCopy,
+  isEmpty,
+  isBoolean,
+  isUrl,
+  numberFormatter,
+  throttle
 }
 
 export default validator
