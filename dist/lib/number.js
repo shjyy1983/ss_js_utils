@@ -5,6 +5,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+/**
+ * 数字转换成 按照某个分隔符以3位分隔的字符串
+ * @param {*} num 数字
+ * @param {*} precision 小数保留位数
+ * @param {*} separator 分隔符
+ */
 function formatNumber(num, precision, separator) {
   var parts = ''; // 判断是否为数字
 
@@ -25,8 +31,23 @@ function formatNumber(num, precision, separator) {
 
   return NaN;
 }
+/**
+ * 解析字符串数字为数字
+ * @param {*} string 字符串，如: 123,456.78
+ * @param {*} separator 分隔符：如：,
+ * @param {*} precision 结果数值的精度
+ */
+
+
+function parseNumber(string, separator) {
+  var precision = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 8;
+  var parts = string.split('.');
+  parts[0] = parts[0].replace(new RegExp(separator || ',', 'g'), '');
+  return Number(Number(parts.join('.')).toFixed(precision));
+}
 
 var _default = {
-  formatNumber: formatNumber
+  formatNumber: formatNumber,
+  parseNumber: parseNumber
 };
 exports.default = _default;

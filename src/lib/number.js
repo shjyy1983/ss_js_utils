@@ -1,3 +1,10 @@
+/*
+ * @Author: SHEN
+ * @Date: 2019-05-14 11:19:08
+ * @Last Modified by:   SHEN
+ * @Last Modified time: 2019-05-14 11:19:08
+ */
+
 /**
  * 数字转换成 按照某个分隔符以3位分隔的字符串
  * @param {*} num 数字
@@ -19,10 +26,9 @@ function formatNumber(num, precision, separator) {
     parts = num.split('.')
     // 整数部分加[separator]分隔, 借用一个著名的正则表达式
     parts[0] = parts[0].toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1' + (separator || ','))
-
     return parts.join('.')
   }
-  return NaN
+  return null
 }
 
 /**
