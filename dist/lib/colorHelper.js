@@ -5,6 +5,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.increaseBrightness = increaseBrightness;
 
+/*
+ * @Author: SHEN
+ * @Date: 2019-05-14 19:49:09
+ * @Last Modified by:   SHEN
+ * @Last Modified time: 2019-05-14 19:49:09
+ */
+
+/**
+ * 根据16进制的颜色，提高其亮度
+ * @param {*} hex  如：#ff00ff
+ * @param {*} percent 如：0.2
+ */
 function increaseBrightness(hex, percent) {
   // strip the leading # if it's there
   hex = hex.replace(/^\s*#|\s*$/g, ''); // convert 3 char codes --> 6, e.g. `E0F` --> `EE00FF`

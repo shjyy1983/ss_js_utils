@@ -5,6 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+/*
+ * @Author: SHEN
+ * @Date: 2019-05-14 11:19:08
+ * @Last Modified by: SHEN
+ * @Last Modified time: 2019-05-14 19:46:34
+ */
+
 /**
  * 数字转换成 按照某个分隔符以3位分隔的字符串
  * @param {*} num 数字
@@ -25,7 +32,7 @@ function formatNumber(num, precision, separator) {
     return parts.join('.');
   }
 
-  return NaN;
+  return null;
 }
 /**
  * 解析字符串数字为数字
