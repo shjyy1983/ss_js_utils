@@ -5,3 +5,8 @@ https://github.com/chriso/validator.js/
 测试
 npm run test
 npm run test ./test/testCompare.js
+
+注意：
+1. 通过 import ss_js_utils.min.js 引入，需要设置：
+babel-loader 需要 exclude
+exclude: [utils.resolve('src/assets/vendor')]

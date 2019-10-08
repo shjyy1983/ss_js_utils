@@ -9,6 +9,10 @@ var _colorHelper = require("./lib/colorHelper");
 
 var _compare = require("./lib/compare");
 
+var _string = require("./lib/string");
+
+var _easyDate = _interopRequireDefault(require("./lib/easyDate"));
+
 var _deepCopy = _interopRequireDefault(require("./lib/deepCopy"));
 
 var _isEmpty = _interopRequireDefault(require("./lib/isEmpty"));
@@ -26,13 +30,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /*
  * @Author: SHEN
  * @Date: 2019-05-14 19:51:15
- * @Last Modified by:   SHEN
- * @Last Modified time: 2019-05-14 19:51:15
+ * @Last Modified by: SHEN
+ * @Last Modified time: 2019-10-08 09:58:43
  */
 var validator = {
+  increaseBrightness: _colorHelper.increaseBrightness,
+  puzzleString: _string.puzzleString,
+  stringStrengthCheck: _string.stringStrengthCheck,
   compare: _compare.compare,
   compareBy: _compare.compareBy,
-  increaseBrightness: _colorHelper.increaseBrightness,
+  easyDate: _easyDate.default,
   deepCopy: _deepCopy.default,
   isEmpty: _isEmpty.default,
   isBoolean: _isBoolean.default,
