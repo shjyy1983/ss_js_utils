@@ -70,3 +70,26 @@ describe('number格式化和解析测试', () => {
     assert.strictEqual(res, 123.4)
   })
 })
+
+describe('number转换成中文单位', () => {
+  it('test 1', () => {
+    let a = 123456.789
+    let res = numberFormatter.num2ChineseUnit(a, 20, 2, true)
+    assert.strictEqual(res, '壹拾贰万叁仟肆佰伍拾陆元柒角玖分')
+  })
+  it('test 2', () => {
+    let a = 10000000000.99
+    let res = numberFormatter.num2ChineseUnit(a, 20, 2, true)
+    assert.strictEqual(res, '壹百亿元玖角玖分')
+  })
+  it('test 3', () => {
+    let a = 10000000000
+    let res = numberFormatter.num2ChineseUnit(a, 20, 2, true)
+    assert.strictEqual(res, '壹百亿元整')
+  })
+  it('test 4', () => {
+    let a = 123.45
+    let res = numberFormatter.num2ChineseUnit(a, 20, 2, true)
+    assert.strictEqual(res, '壹佰贰拾叁元肆角伍分')
+  })
+})

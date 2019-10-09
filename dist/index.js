@@ -31,12 +31,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @Author: SHEN
  * @Date: 2019-05-14 19:51:15
  * @Last Modified by: SHEN
- * @Last Modified time: 2019-10-08 09:58:43
+ * @Last Modified time: 2019-10-08 20:25:43
  */
 var validator = {
   increaseBrightness: _colorHelper.increaseBrightness,
   puzzleString: _string.puzzleString,
   stringStrengthCheck: _string.stringStrengthCheck,
+  stringStrengthCheckLeveled: _string.stringStrengthCheckLeveled,
   compare: _compare.compare,
   compareBy: _compare.compareBy,
   easyDate: _easyDate.default,

@@ -2,12 +2,12 @@
  * @Author: SHEN
  * @Date: 2019-05-14 19:51:15
  * @Last Modified by: SHEN
- * @Last Modified time: 2019-10-08 09:58:43
+ * @Last Modified time: 2019-10-09 20:14:45
  */
 
 import { increaseBrightness } from './lib/colorHelper'
 import { compare, compareBy } from './lib/compare'
-import { puzzleString, stringStrengthCheck } from './lib/string'
+import { puzzleString, stringStrengthCheck, stringStrengthCheckLeveled } from './lib/string'
 import easyDate from './lib/easyDate'
 import deepCopy from './lib/deepCopy'
 import isEmpty from './lib/isEmpty'
@@ -20,6 +20,7 @@ const validator = {
   increaseBrightness,
   puzzleString,
   stringStrengthCheck,
+  stringStrengthCheckLeveled,
   compare,
   compareBy,
   easyDate,
