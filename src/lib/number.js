@@ -1,8 +1,10 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable eqeqeq */
 /*
  * @Author: SHEN
  * @Date: 2019-05-14 11:19:08
  * @Last Modified by: SHEN
- * @Last Modified time: 2019-10-09 20:23:19
+ * @Last Modified time: 2019-10-09 20:28:52
  */
 
 /**
@@ -275,7 +277,6 @@ function numtochinese(Num, suffixNumber) {
       newchar.charAt(newchar.length - 1) == '角') { newchar = newchar + '整' }
 
   var digit = ['壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖']
-  var _i = 0
   while (newchar.length > 0) {
     if (digit.indexOf(newchar[0]) < 0) {
       newchar = newchar.substr(1)

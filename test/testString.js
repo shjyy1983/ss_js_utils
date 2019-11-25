@@ -112,7 +112,6 @@ describe('string字符串强度检测2', () => {
   it('test1', () => {
     let str = '123a62&A229'
     let res = stringFormatter.stringStrengthCheckLeveled(str)
-    console.log(res)
     assert.strictEqual(res.allPass, true)
     assert.strictEqual(res.strength, 5)
   })
@@ -160,5 +159,13 @@ describe('string字符串强度检测2', () => {
     let str = '12a345A678'
     let res = stringFormatter.stringStrengthCheckLeveled(str)
     assert.strictEqual(res.strength, 4)
+  })
+})
+
+describe('string去除emoji', () => {
+  it('test1', () => {
+    let str = 'hello😢123🚗😊world🚗🚄'
+    let res = stringFormatter.removeEmoji(str)
+    assert.strictEqual(res, 'hello123world')
   })
 })

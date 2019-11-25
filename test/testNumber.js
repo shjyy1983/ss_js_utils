@@ -92,4 +92,9 @@ describe('number转换成中文单位', () => {
     let res = numberFormatter.num2ChineseUnit(a, 20, 2, true)
     assert.strictEqual(res, '壹佰贰拾叁元肆角伍分')
   })
+  it('test 4', () => {
+    let a = 100000000000000
+    let res = numberFormatter.num2ChineseUnit(a, 20, 2, true)
+    assert.strictEqual(res, '壹百兆元整')
+  })
 })

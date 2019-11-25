@@ -2,7 +2,7 @@
  * @Author: SHEN
  * @Date: 2019-08-07 09:08:06
  * @Last Modified by: SHEN
- * @Last Modified time: 2019-10-08 20:23:42
+ * @Last Modified time: 2019-11-25 20:37:35
  */
 
 /**
@@ -99,8 +99,18 @@ function stringStrengthCheckLeveled(str, minLen = 8, maxLen = 16) {
   }
 }
 
+/**
+ * https://www.cnblogs.com/zt-blog/p/6773854.html
+ * @param {*} str 包含 emoji 的字符串
+ */
+function removeEmoji(str) {
+  let regStr = /[\uD83C|\uD83D|\uD83E][\uDC00-\uDFFF][\u200D|\uFE0F]|[\uD83C|\uD83D|\uD83E][\uDC00-\uDFFF]|[0-9|*|#]\uFE0F\u20E3|[0-9|#]\u20E3|[\u203C-\u3299]\uFE0F\u200D|[\u203C-\u3299]\uFE0F|[\u2122-\u2B55]|\u303D|[\A9|\AE]\u3030|\uA9|\uAE|\u3030/ig
+  return str.replace(regStr, '')
+}
+
 export {
   puzzleString,
   stringStrengthCheck,
-  stringStrengthCheckLeveled
+  stringStrengthCheckLeveled,
+  removeEmoji
 }
